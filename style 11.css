@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+form{
+    background-color: aquamarine;
+    width: 400px;
+    height: 500px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    
+}
+form h2{
+    text-align: center;
+}
+.name,.email ,.number,.area,.city{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    width: 80%;
+}
+.divide{
+    display: flex;
+    gap: 12px;
+}
+.divide input{
+    height: 35px;
+    padding-inline-start: 10px;
+    border-radius: 10px;
+    border: 2px lightgrey;
+    outline: transparent;
+}
+.divide input:hover{
+    border-style: none;
+    border: none;
+    outline: none;
+}
+.city input{
+    height: 35px;
+    border-radius: 10px;
+    padding-inline-start: 10px;
+    margin-left: 10px;
+}
+.name input{
+    height: 35px;
+    border-radius: 10px;
+    padding-inline-start: 10px;
+    margin-left: 10px;
+}
+.email input{
+    height: 30px;
+    border-radius: 10px;
+    padding-inline-start: 10px;
+    margin-left: 10px;
+}
+.number input{
+    height: 35px;
+    border-radius: 10px;
+    padding-inline-start: 10px;
+    margin-left: 10px;
+}
+.area input{
+    height: 35px;
+    border-radius: 10px;
+    padding-inline-start: 10px;
+    margin-left: 10px;
+}
+.submit{
+    justify-self: center;
+    margin: 20px;
+    
+}
+button{
+    height: 40px;
+    width: 180px;
+    font-size: 20px;
+    color: orange;
+    font-weight: bolder;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 7px;
+}
+button:hover{
+    transform: scale(0.8);
+    background-color: orangered;
+    color: #fff;
+}

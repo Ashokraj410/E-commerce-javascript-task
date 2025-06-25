@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style 11.css">
+    
+</head>
+<body>
+    <form action="" name="formreg" onsubmit="returnValidateForm()">
+        <h2>Delivery Address</h2>
+        <div class="name">
+            <label for="text">Name</label>
+            <input type="text" id="name" name="name" placeholder="enter your name">
+            <span id="name-error" name="error-message"></span>
+        </div>
+        <div class="email">  
+            <label for="text">Email</label>
+            <input type="email" id="email" name="email" placeholder="enter your email ">
+            <span id="email-error" name="error-message"></span>
+        </div>
+        <div class="number">
+            <label for="text">Phonenumber</label>
+            <input type="tel" id="Phonenumber" name="tel" placeholder="enter your Phonenumber">
+            <span id="Phonenumber" name="error-message"></span>
+        </div>
+        
+        <div class="area">
+            <label for="text">Area</label>
+            <input type="text" id="area" name="name" placeholder="enter your street name">
+            <span id="area-error" name="error-message"></span>
+        </div>
+        <div class="city">
+            <label for="text">City</label>
+            <input type="text" id="city" name="name" placeholder="enter your city">
+            <span id="city-error" name="error-message"></span>
+        </div>
+        <div class="divide">
+            <div class="state">
+                <label for="text">state</label>
+                <input type="text" id="state" name="name" placeholder="enter your state">
+                <span id="state-error" name="error-message"></span>
+            </div>
+            <div class="pincode">
+                <label for="text">pincode</label>
+                <input type="text" id="pincode" name="pincode" placeholder="enter your pincode">
+                <span id="pincode-error" name="error-message"></span>
+            </div>
+
+        </div>
+        <div class="submit">
+            <button type="submit">Delivery here</button>
+        </div>
+    </form>
+    
+
+
+    <script>
+        function ValidationForm(){
+            const name=document.getElementById("name").value.trim();
+            const email=document.getElementById("email").value.trim();
+            const Phonenumber=document.getElementById("number").value.trim();
+            const area=document.getElementById("area").value.trim();
+            const city=document.getElementById("city").value.trim();
+            const state=document.getElementById("state").value.trim();
+            const pincode=document.getElementById("pincode").value.trim();
+            
+
+        }
+    </script>
+</body>
+</html>
