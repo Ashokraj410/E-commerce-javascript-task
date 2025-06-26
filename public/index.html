@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3329bf17c6.js"></script>
+</head>
+<body>
+    <main class="container" onkeyup="Search()" >
+        <div class=" btn-inputs">
+            <div class="buttons-group" id="buttons">
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="shirt">shirt</button>
+                <button class="filter-btn" data-category="sunglass">sunglass</button>
+                <button class="filter-btn" data-category="watch">watch</button>
+                <button class="filter-btn" data-category="wallet">wallet</button>
+                <button class="filter-btn" data-category="mobiles">mobiles</button>
+                <button class="filter-btn" data-category="laptop">laptop</button>
+            </div>
+            <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="neme" id="search"  placeholder="enter the products">
+            </div>
+        </div>
+        <div class="product-list" id="product-list">
+            <div class="products">
+                <div class="card" data-category="laptop">
+                    <div class="box">
+                        <img src="image/apple.jpg" alt="apple">
+                    </div>
+                    <div class="details">
+                        <h2>Apple Mac</h2>
+                        <h3>Rs 76500 <span>25%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="laptop">
+                    <div class="box">
+                        <img src="image/hp.jpg" alt="apple">
+                    </div>
+                    <div class="details">
+                        <h2> HP laptop </h2>
+                        <h3>Rs 45000</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box" data-category="laptop">
+                        <img src="image/lenovo.avif" alt="lenovo">
+                    </div>
+                    <div class="details">
+                        <h2>Lenovo</h2>
+                        <h3>Rs 43200<span>18%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="laptop">
+                    <div class="box">
+                        <img src="image/dell.avif" alt="dell">
+                    </div>
+                    <div class="details">
+                        <h2>Dell laptop</h2>
+                        <h3>Rs 54300<span>30%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="t-shirt">
+                    <div class="box">
+                        <img src="image/10fa6957-1082-4a8e-a7fa-b28e8a4d7dc11710836900879-NOBERO-Men-Typography-Printed-Applique-T-shirt-2971710836900-7.jpg" alt="dell">
+                    </div>
+                    <div class="details">
+                        <h2>Mens Printed t-shirt</h2>
+                        <h3>Rs 329<span>30%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="card" data-category="mobiles">
+                    <div class="box">
+                        <img src="image/vivo.webp" alt="vivo">
+                    </div>
+                    <div class="details">
+                        <h2>Vivo V20 5G</h2>
+                        <h3>Rs 26500 <span>25%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="mobiles">
+                    <div class="box">
+                        <img src="image/vivo v50.jpg" alt="vivo v50">
+                    </div>
+                    <div class="details">
+                        <h2>Vivo V50pro </h2>
+                        <h3>Rs 45000<span>17%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="mobiles">
+                    <div class="box">
+                        <img src="image/redmi.jpg" alt="redmi">
+                    </div>
+                    <div class="details">
+                        <h2>Redmi</h2>
+                        <h3>Rs 21999<span>23%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="mobiles">
+                    <div class="box">
+                        <img src="image/one plus.jpg" alt="one plus">
+                    </div>
+                    <div class="details">
+                        <h2>One plus CE2 lite 5G</h2>
+                        <h3>Rs 21599<span>8%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="watch">
+                    <div class="box">
+                        <img src="image/retina display smart watch.jpg" alt="lenovo">
+                    </div>
+                    <div class="details">
+                        <h2>fastrack smart watch</h2>
+                        <h3>Rs 3200<span>18% offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="card" data-category="belt">
+                    <div class="box">
+                        <img src="image/belt 2.webp" alt="belt">
+                    </div>
+                    
+                    <div class="details">
+                        <h2>Belt (black)</h2>
+                        <h3>Rs 460<span>25%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="belt">
+                    <div class="box">
+                        <img src="image/belt leather.webp" alt="apple">
+                    </div>
+                    
+                    <div class="details">
+                        <h2>Belt leather(brown)</h2>
+                        <h3>Rs 859<span>10%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="belt">
+                    <div class="box">
+                       <img src="image/belt.jpg" alt="lenovo">
+                    </div>
+                    <div class="details">
+                        <h2>Belt</h2>
+                        <h3>Rs 568</h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="wallet">
+                    <div class="box">
+                        <img src="image/wallet 2.jpg" alt="wallet">
+                    </div>
+                    <div class="details">
+                        <h2>wallet</h2>
+                        <h3>Rs 349<span>30%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="t-shirt">
+                    <div class="box">
+                        <img src="image/61kHoFE8mAL._UY1100_.jpg" alt="t-shirt">
+                    </div>
+                    <div class="details">
+                        <h2>T-shirt</h2>
+                        <h3>Rs 329<span>50%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="card" data-category="wallet">
+                    <div class="box">
+                        <img src="image/wallet.webp" alt="wallet">
+                    </div>
+                    <div class="details">
+                        <h2>Wallet (brown-leather)</h2>
+                        <h3>Rs 754<span>35%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="sunglass">
+                    <div class="box">
+                        <img src="image/sunglass.jpg" alt="sunglass">
+                    </div>
+                    <div class="details">
+                        <h2>Sunglass</h2>
+                        <h3>Rs 789<span>10%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="shoes">
+                    <div class="box">
+                        <img src="image/shooes 1.jpg" alt="shoes">
+                    </div>
+                    <div class="details">
+                        <h2>Adidas mens casual shoes</h2>
+                        <h3>Rs 2159<span>18%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="shoes">
+                    <div class="box">
+                        <img src="image/men-39-s-shoes-comfortable-casual.jpg" alt="casual">
+                    </div>
+                    <div class="details">
+                        <h2>Mens casual shoes-Puma</h2>
+                        <h3>Rs 1789<span>34%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="t-shirt">
+                    <div class="box">
+                        <img src="image/61kHoFE8mAL._UY1100_.jpg" alt="">
+                    </div>
+                    
+                    <div class="details">
+                        <h2>Mens casual black t-shirt</h2>
+                        <h3>Rs 859<span>13%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="card" data-category="t-shirt">
+                    <div class="box">
+                        <img src="image/junot-mens-t-shirt-white27624_749f4acd-f247-4684-bc27-d55f0a842274.webp" alt="t-shirt">
+                    </div>
+                    <div class="details">
+                        <h2>Mens T-shirt white</h2>
+                        <h3>Rs 599<span>25%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                           
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="shirt">
+                    <div class="box">
+                        <img src="image/63400407ad052c2c656c7cd6-lelebear-stretch-anti-wrinkle-shirt-men.jpg" alt="apple">
+                    </div>
+                    
+                    <div class="details">
+                        <h2>Mens shirt </h2>
+                        <h3>Rs 450<span>10%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="watch">
+                    <div class="box">
+                        <img src="image/fastrack smart.jpg" alt="lenovo">
+                    </div>
+                    
+                    <div class="details">
+                        <h2>fastrack smart watch</h2>
+                        <h3>Rs 4200<span>14%offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-category="shirt">
+                    <div class="box">
+                        <img src="image/mens-full-sleeve-printed-casual-shirt.jpg" alt="dell">
+                    </div>
+                    
+                    <div class="details">
+                        <h2>Mens full sleeve shirt </h2>
+                        <h3>Rs 750<span>30% offer</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" class="t-shirt">
+                    <div class="box">
+                        <img src="image/aopleaffull-drgreen_1_1a79e149-38d7-4da2-9d3d-f223677e855d.webp" alt="apple">
+                    </div>
+                    
+                    <div class="details">
+                        <h2>Full sleeve t-shirt</h2>
+                        <h3>Rs 530<span>25% offers</span></h3>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="buy">
+                            <button class="primary"><a href="buy.html">Buy now</a></button>
+                            <button class="secondary">Add Card</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="note.js"></script>
+</body>
+</html>
