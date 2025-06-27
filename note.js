@@ -45,3 +45,32 @@ const Search=() =>{
     }
 
     }
+
+    //Add to card function
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+      const card = this.closest('.card');
+      const title = card.querySelector('h2').innerText;
+      const priceText = card.querySelector('h3').innerText;
+      const imgSrc = card.querySelector('img').getAttribute('src');
+      const priceMatch = priceText.match(/\d+/g);
+      const price = priceMatch ? parseInt(priceMatch[0]) : 0;
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const existingProduct = cart.find(p => p.title === title);
+      if (existingProduct) {
+        existingProduct.quantity += 1;
+      } else {
+        cart.push({
+          title,
+          price,
+          img: imgSrc,
+          quantity: 1
+        });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${title} added to cart!`);
+    });
+  });

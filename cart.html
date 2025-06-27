@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="stylecart.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <h1>Your Cart</h1>
+    </header>
+    <section>
+        <div class="row">
+            <div id="cart-items"></div>
+        </div>
+        <div>
+            <p id="total"></p>
+        </div>
+
+    </section>
+  
+  
+  <button onclick="clearCart()">Clear Cart</button>
+  <br><br>
+  
+
+<script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function renderCart() {
+  const container = document.getElementById('cart-items');
+  container.innerHTML = '';
+
+  if (cart.length === 0) {
+    container.innerHTML = '<p>Your cart is empty.</p>';
+    document.getElementById('total').innerText = '';
+    return;
+  }
+
+  let totalPrice = 0;
+
+  cart.forEach((product, index) => {
+    const subtotal = product.price * product.quantity;
+    totalPrice += subtotal;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.display='inline-block'
+    card.style.margin='10px'
+    card.innerHTML = `
+      <img src="${product.img}" alt="${product.title}">
+      <h2>${product.title}</h2>
+      <h3>₹${product.price}</h3>
+      <p>Subtotal: ₹${subtotal}</p>
+      <div class="input">
+      <button onclick="increaseQuantity(${index})">+</button>
+      <h2>${product.quantity}<h2>
+      <button onclick="decreaseQuantity(${index})">-</button>
+      </div>
+      <button onclick="removeItem(${index})">Remove</button>
+      <button class="primary"><a href="buy.html">Buy now</a></button>
+    `;
+    container.appendChild(card);
+    
+  });
+
+  document.getElementById('total').innerText = `Total Price: ₹${totalPrice}`;
+}
+
+function increaseQuantity(index) {
+  cart[index].quantity += 1;
+  saveCart();
+  renderCart();
+}
+
+function decreaseQuantity(index) {
+  if (cart[index].quantity > 1) {
+    cart[index].quantity -= 1;
+  } else {
+    // Optional: remove item if quantity is 1
+    cart.splice(index, 1);
+  }
+  saveCart();
+  renderCart();
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  saveCart();
+  renderCart();
+}
+
+function clearCart() {
+  cart = [];
+  saveCart();
+  renderCart();
+}
+
+renderCart();
+</script>
+</body>
+</html>

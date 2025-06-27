@@ -160,7 +160,7 @@ main{
     text-decoration: none;
     color: #fff;
 }
-.buy .secondary{
+.buy .add-to-cart{
     background-color: rgb(229, 21, 21);
     border: 2px solid palegreen;
     font-size: 15px;
@@ -170,6 +170,29 @@ main{
     height: 30px;
     border-radius: 4px;
     cursor: pointer;
+}
+.gotocart{
+    text-align: center;
+    margin-top: 30px;
+    gap: 6px;
+
+}
+.gotocart button{
+    background-color:#AEEA94;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 9px;
+    border: 2px;
+}
+.gotocart a{
+    text-decoration: none;
+    color: #fff;
+}
+.gotocart i{
+    margin-right: 6px;
+    font-size: 22px;
+    color: orange;
 }
 
 @media  (max-width:768px){
