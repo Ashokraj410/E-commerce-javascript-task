@@ -10,54 +10,44 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-image: url(image/back.jpg);
+    background-image: url(image/gradient.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #fff;
 }
 form{
-    background-color: #FFF1CA;
-    width: 370px;
+    width: 380px;
     height: 580px;
     padding: 10px;
-    border: 2px solid gray;
+    border: 2px solid;
     border-radius: 20px;
     font-size: 18px;
     position: fixed;
-
-
-    
 }
 form h2{
     text-align: center;
+    font-size: 23px;
 }
 .name,.email ,.number,.area,.city{
     display: flex;
     flex-direction: column;
-    margin-bottom: 3px;
-    width: 80%;
+    width: 90%;
+}
+input{
     margin-left: 20px;
 }
 .divide{
     display: flex;
     gap: 5px;
-    margin-left: 10px;
 
 }
 .divide input{
+    margin: 0;
     width: 90%;
     height: 35px;
     padding-inline-start: 10px;
     border-radius: 10px;
-    border: 2px lightgrey;
-    outline: transparent;
-}
-.divide input:hover{
-    border-style: none;
-    border: none;
-    outline: none;
 }
 .city input{
     height: 35px;
@@ -72,7 +62,7 @@ form h2{
     margin-left: 10px;
 }
 .email input{
-    height: 30px;
+    height: 35px;
     border-radius: 10px;
     padding-inline-start: 10px;
     margin-left: 10px;
@@ -91,27 +81,37 @@ form h2{
 }
 .submit{
     justify-self: center;
-    margin: 20px;
+    margin-top: 20px;
     
 }
 span{
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 15px;
     color: red;
 }
 button{
-    margin-top: 5px;
-    height: 40px;
-    width: 180px;
+    height: 34px;
+    width: 150px;
     font-size: 20px;
-    color: orange;
-    font-weight: bolder;
+    font-weight: 700;
+    background-color:oklch(27.9% 0.041 260.031);
     cursor: pointer;
-    border: 2px solid;
-    border-radius: 7px;
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 9px;
 }
 button:hover{
     transform: scale(0.8);
-    background-color: orangered;
-    color: #fff;
 }
+.home a{
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+@media  (max-width:400px){
+    form{
+        width:310px ;
+    }
+}
+

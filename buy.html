@@ -22,7 +22,7 @@
         </div>
         <div class="number">
             <label for="text">Phonenumber</label>
-            <input type="tel" id="Phonenumber" name="tel" placeholder="Enter your Phonenumber">
+            <input type="number" id="Phonenumber" name="tel" placeholder="Enter your Phonenumber">
             <span id="Phonenumber-error" name="error-message"></span>
         </div>
         
@@ -44,7 +44,7 @@
             </div>
             <div class="pincode">
                 <label for="text">pincode</label>
-                <input type="text" id="pincode" name="pincode" placeholder="Enter your pincode">
+                <input type="number" id="pincode" name="pincode" placeholder="Enter your pincode">
                 <span id="pincode-error" name="error-message"></span>
             </div>
 
@@ -117,7 +117,7 @@
 
     // Pincode validation
     if (pincode === "" || !/^\d{6}$/.test(pincode)) {
-        document.getElementById("pincode-error").innerText = "Valid 6-digit pincode is required";
+        document.getElementById("pincode-error").innerText = "Valid 6-digit pincode";
         isValid = false;
     }
 

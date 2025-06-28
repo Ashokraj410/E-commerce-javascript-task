@@ -9,20 +9,20 @@
     <header>
         <a href="index.html">Home</a>
         <h1>Your Cart</h1>
+        <button onclick="clearCart()">Clear Cart</button>
     </header>
     <section>
         <div class="row">
             <div id="cart-items"></div>
         </div>
-        <div>
+        <div class="total-amount">
             <p id="total"></p>
         </div>
 
     </section>
   
   
-  <button onclick="clearCart()">Clear Cart</button>
-  <br><br>
+  
   
 
 <script>
@@ -62,8 +62,10 @@ function renderCart() {
       <h2>${product.quantity}<h2>
       <button onclick="decreaseQuantity(${index})">-</button>
       </div>
+      <div class="btn">
       <button onclick="removeItem(${index})">Remove</button>
       <button class="primary"><a href="buy.html">Buy now</a></button>
+      </div>
     `;
     container.appendChild(card);
     
