@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment style.css">
+</head>
+<body>
+    <form  id="payment-form" class="container" name="Regform" onsubmit="return validateForm()">
+        <div class="row">
+            <label for="name">Card holder name</label>
+            <input type="text" name="username" id="holdername" placeholder="enter your ">
+            <span id="name-error" name="error-message"></span>
+        </div>
+        <div class="row" >
+            <label for="number">Card number</label>
+            <input type="number" id="cardnumber" placeholder="enter your card number">
+            <span id="card-error" name="error-message"></span>
+        </div>
+        <div class="row">
+            <label for="text">exp Date</label>
+            <input type="month" name="expdate" id="expdate" placeholder="exp date">
+            <span id="exp-error" name="error-message"></span>
+        </div>
+        <div class="row">
+            <label for="text">CVV</label>
+            <input type="number" id="cv" placeholder="enter cvv number">
+            <span id="cvv-error" name="error-message"></span>
+        </div>
+        <div>
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="text">I hereby declare that the information provided is true and correct.</label>
+        </div>
+        <span id="checkbox-error" name="error-message"></span>
+        <div class="btn">
+            <button type="submit">Paynow</button>
+        </div>
+    </form>
+    
+
+
+
+    <script>
+        document.getElementById("payment-form").addEventListener('submit',function(e){
+            e.preventDefault();
+            if(!validateForm())
+            return;
+        window.location.href='rating.html'
+        })
+
+        function validateForm(){
+            let name=document.getElementById("holdername").value.trim();
+            let cardNumber=document.getElementById("cardnumber").value.trim();
+            let expDate=document.getElementById("expdate").value.trim();
+            let cvv=document.getElementById("cv").value.trim();
+            let checkbox=document.getElementById("checkbox")
+
+
+            document.getElementById("name-error").innerText=""
+            document.getElementById("card-error").innerText="";
+            document.getElementById("exp-error").innerText="";
+            document.getElementById("cvv-error").innerText="";
+            document.getElementById("checkbox-error").innerText="";
+
+             let isValid=true;
+
+            if(name===""){
+                document.getElementById("name-error").innerText="enter your name"
+                isValid=false;
+            }
+            if(cardNumber===""||cardNumber.length < 16 ||!/^\d{16}$/.test(cardNumber)){
+                document.getElementById("card-error").innerText="enter 16 digit Number"
+                isValid=false;
+            }
+            if(expDate===""){
+                document.getElementById("exp-error").innerText="enter valid date"
+                isValid=false;
+            }
+            if(cvv===""||cvv.length < 3 ||!/^\d{3}$/.test(cvv)){
+                document.getElementById("cvv-error").innerText="enter valid cvv"
+                isValid=false;
+            }
+            if(!checkbox.checked){
+                document.getElementById("checkbox-error").innerText="you must agree before paying "
+                isValid=false;
+            }
+            return isValid;
+        }
+        
+    </script>
+</body>
+</html>

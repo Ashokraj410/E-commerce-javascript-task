@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <form action="" name="formreg" onsubmit="return validateForm()">
+    <form action="" name="formreg" onsubmit="return validateForm()" id="delivery-form">
         <h2>Delivery Address</h2>
         <div class="name">
             <label for="text">Name</label>
@@ -60,7 +60,23 @@
     
 
 
-    <script>function validateForm() {
+    <script>
+
+
+
+    document.getElementById('delivery-form').addEventListener('submit', function(e) {
+      e.preventDefault();  // prevent default redirect
+      if (!validateForm()) return;  // only redirect if valid
+
+      // Pass data via URL or sessionStorage if needed
+      window.location.href = 'cash.html';
+    });
+    
+    
+    
+    
+    
+    function validateForm() {
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
     let phone = document.getElementById("Phonenumber").value.trim();
@@ -119,6 +135,16 @@
     if (pincode === "" || !/^\d{6}$/.test(pincode)) {
         document.getElementById("pincode-error").innerText = "Valid 6-digit pincode";
         isValid = false;
+    }
+    if(isValid){
+        const userData={
+            name,email,phone,area,state,city,pincode
+        }
+
+        let users=JSON.parse(localStorage.getItem("users"))||[];
+        users.push(userData);
+        localStorage.setItem("users",JSON.stringify(users));
+        window.location.href="customer.html";
     }
 
     return isValid; 

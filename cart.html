@@ -8,7 +8,7 @@
 <body>
     <header>
         <a href="index.html">Home</a>
-        <h1>Your Cart</h1>
+        <h1>Your <span>Cart</span></h1>
         <button onclick="clearCart()">Clear Cart</button>
     </header>
     <section>
@@ -51,7 +51,7 @@ function renderCart() {
     const card = document.createElement('div');
     card.className = 'card';
     card.style.display='inline-block'
-    card.style.margin='10px'
+    card.style.margin='15px'
     card.innerHTML = `
       <img src="${product.img}" alt="${product.title}">
       <h2>${product.title}</h2>

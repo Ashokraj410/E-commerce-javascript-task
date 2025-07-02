@@ -1,0 +1,94 @@
+@import url("https://kit.fontawesome.com/3329bf17c6.js");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+}
+.container{
+    width: 320px;
+    height: 250px;
+    background-color:#547792;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #92e6f3;
+}
+.container h1{
+    font-size: 25px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.para{
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}.para .message{
+    color: gold;
+    font-weight: 900;
+}
+.starrating{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.starrating>input{
+    display: none;
+}
+
+
+.starrating>label{
+    transform:0.2s;
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    font-size: 2rem;
+    margin: 5px;
+}
+
+.starrating> label::before{
+    content: '\f005';
+    font-family: FontAwesome;
+    cursor: pointer;
+    font-weight: 900;
+}
+.starrating .full{
+    cursor: pointer;
+}
+.starrating>.half::before{
+    content: '\f089';
+    position: absolute;
+    margin-top: -18px;
+    margin-left: 10px;
+    border-radius: 30px;
+    cursor: pointer;    
+}
+.starrating > input:checked~label,
+.starrating:not(:checked)>label:hover,
+.starrating:not(:checked)>label:hover~label
+{
+    color: rgb(245, 209, 3);
+}
+
+form header{
+    color: gold;
+    font-size: 22px;
+}
+form{
+    justify-items: center;
+}

@@ -7,6 +7,7 @@ body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    background-color: #f0f2f5;
 }
 html{
     overflow-x: hidden;
@@ -15,29 +16,32 @@ main{
     display: flex;
     flex-direction: column;
 }
-header{
+.header{
     width: 100%;
-    height: 70px;
     display: flex;
     justify-content: space-between;
     background-color:#A2AADB;
-    align-items: center;
 }
-header .logo,.gotocart{
-    margin: 40px;
-    margin-top: 50px;
+.logo,.gotocart{
+    margin-left: 40px;
+    margin-top: 20px;
 
 }
-header h1{
+.gotocart{
+    margin-right: 80px;
+}
+.header h1{
+    margin-top: 20px;
     font-size: 50px;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
 }
-header h1 span{
+.header h1 span{
     color:oklch(59.2% 0.249 0.584);
 }
-header button{
+.header button{
     width: 150px;
+    margin-top: 15px;
     height: 35px;
     background-color: #fff;
     color: antiquewhite;
@@ -46,12 +50,16 @@ header button{
     border: 1px solid orangered;
     
 }
-header button a{
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+	-webkit-appearance:none;
+}
+.header button a{
     text-decoration: none;
     color: black;
 
 }
-header button i{
+.header button i{
     font-size: 25px;
     color: orangered;
     margin-right: 5px;
@@ -71,13 +79,10 @@ header button i{
     width: 100vw;
     justify-content: space-between;
     background-color: #A2AADB;
-    height: 110px;
-    align-content: center;
-    align-items: center;
+    height: 200px;
 
 }
 .buttons-group{
-    margin-top: 16px;
     margin-left: 20px;
     gap: 20px;
 }
@@ -104,7 +109,6 @@ header button i{
 
 }
 .search-input{
-    margin-top: 10px;
     margin-right: 40px;
     background-color: #fff;
     border: none;
@@ -112,14 +116,15 @@ header button i{
     display: flex;
     margin-left: 40px;
     width: 100%;
-    flex-direction: row;
     align-items: center;
     cursor: pointer;
     border-radius: 8px;
+    height: 35px;
 }
 .search-input input{
     outline: none;
     width: 100%;
+    height: 35px;
     border: none;
     padding: 10px;
     font-size: 16px;
@@ -134,9 +139,8 @@ header button i{
 .product-list{
     display: flex;
     flex-direction: column;
-    background-color: cornsilk;
-    row-gap: 20px
-;
+    background-color: #f0f2f5;
+    row-gap: 20px;
 
 }
 .products{
@@ -234,36 +238,101 @@ header button i{
 }
 
 
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    text-align: center;
+  }
 
-@media  (max-width:768px){
-    .btn-inputs{
-        height: 150px;
-    }
+  .logo, .gotocart {
+    margin: 10px 0;
+  }
 
-    .buttons-group{
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 5px;
-        margin-left: 10px;     
+  .header h1 {
+    font-size: 30px;
+  }
 
-        
-    }
-    .buttons-group button{
-        margin-left: 10px;
-        width: 60px;
-        margin-top: 8px;
-    }
+  .header button {
+    width: 120px;
+    font-size: 16px;
+  }
 
-    .search-input{
-        margin-top: 10px;
-        width: 100%;
-        align-self: center;
-        justify-items: center;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        margin: 30px;
-    }
-    
+  .btn-inputs {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 10px;
+  }
+
+  .search-input {
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buy {
+    margin-top: 0;
+  }
+  .buy .primary{
+    height: 25px;
+  }
+  .buy .add-to-cart{
+    height: 25px;
+  }
+
 }
+@media (min-width: 601px) and (max-width: 900px) {
+  .header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .btn-inputs {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .search-input {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .buttons-group {
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+  }
+
+  .products {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    flex:  2 50%;
+    margin: 10px;
+  }
+}
+
+
 
