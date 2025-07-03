@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <form action="" name="formreg" onsubmit="return validateForm()" id="delivery-form">
+    <form action="" name="formreg"  id="delivery-form">
         <h2>Delivery Address</h2>
         <div class="name">
             <label for="text">Name</label>
@@ -54,6 +54,7 @@
         </div>
         <div class="home">
             <a href="index.html" class="home-button">Home</a>
+            <a href="customer.html">Details</a>
         </div>
 
     </form>
@@ -65,16 +66,10 @@
 
 
     document.getElementById('delivery-form').addEventListener('submit', function(e) {
-      e.preventDefault();  // prevent default redirect
-      if (!validateForm()) return;  // only redirect if valid
+      e.preventDefault(); 
+      if (validateForm()) ; 
 
-      // Pass data via URL or sessionStorage if needed
-      window.location.href = 'cash.html';
     });
-    
-    
-    
-    
     
     function validateForm() {
     let name = document.getElementById("name").value.trim();
@@ -144,10 +139,9 @@
         let users=JSON.parse(localStorage.getItem("users"))||[];
         users.push(userData);
         localStorage.setItem("users",JSON.stringify(users));
-        window.location.href="customer.html";
+        window.location.href="cash.html";
     }
 
-    return isValid; 
 }
 </script>
 

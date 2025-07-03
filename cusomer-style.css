@@ -6,35 +6,139 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: aliceblue;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
 }
 h2{
+    margin-top: 10px;
+    font-size: 40px;
     text-align: center;
 }
 table{
     width: 90%;
     border-collapse: collapse;
     justify-content: center;
-
-
+    margin-top: 14px;
+    font-size: 18px;
+    border: 1px solid #ccc;
 }
 table th, table td {
-  border: 1px solid #ccc;
+  border: none;
   padding-bottom: 3px;
   padding-top: 3px;
 }
 
-th, td {
+thead{
+    height: 40px;
+    border-inline: none;
+}
+tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+tbody tr:nth-child(add){
+    background-color: #ffffFF;
+}
+th,td {
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border: none;
+    border-left: none;
+    border-right: none;
+}
+thead th{
+    border: none;
+    border-left: none;
+    border-right: none;
 }
 
-th {
+th{
     background-color: #27667B;
     color: white;
-    font-size: 16px;
+    border: none;
+    border-left: none;
+    border-right: none;
+}
+ table .primary{
+    background-color:#fff;
+    border: 1px solid black;
+    width: 70px;
+    padding: 3px;
+    color: red;
+    border-radius: 5px;
+
+}
+table .secondary{
+    background-color: #fff;
+    border-radius: 5px;
+    color: #111792;
+    font-size: 14px;
+    padding: 3px;
+    border: 2px solid #94B4C1;
+    width: 60px;
+}
+.home{
+    margin-top: 30px;
+
+}
+.home button{
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #94B4C1;
+    border-radius: 10px;
+}
+.home a{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bolder;
+    
+}
+@media (max-width: 785px) {
+    body{
+        width: auto;
+        align-items: center;
+    }
+    h2{
+        text-align: center;
+
+    }
+    table,tbody,thead,th,tr,td{
+       display: block;
+       width: 100%;
+    }
+    tbody{
+       margin-top: 290px;
+    }
+    table{
+       justify-items: center;
+    }
+    tbody,tr,td{
+        text-align: left;
+        font-size: 25px;
+    }
+    tr,td{
+        padding-inline-start: 20px;
+    }
+    thead,th{
+        border: none;
+        font-size: 25px;
+    }
+    thead,tr,th{
+        border: none;
+    }
+    table .primary{
+        width: 100px;
+        font-size: 20px;
+    }
+    table .secondary{
+        width: 100px;
+        font-size: 20px;
+    }
+    thead th{
+        border: none;
+        border-left: none;
+        border-right: none;
+    }
 }

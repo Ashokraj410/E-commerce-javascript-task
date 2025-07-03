@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="cusomer-style.css">
 </head>
 <body>
-  <h2>customer Details</h2>
+  <h2>Customer Details</h2>
   <table id="usertable">
     <thead>
       <tr>
-        <th>name</th>
-        <th>email</th>
-        <th>phone</th>
-        <th>area</th>
-        <th>state</th>
-        <th>city</th>
-        <th>pincode</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>PHONE NUMBER</th>
+        <th>AREA</th>
+        <th>STATE</th>
+        <th>CITY</th>
+        <th>PINCODE</th>
+        <th>DELETE</th>
+        <th>EDIT</th>
       </tr>
-
     </thead>
     <tbody></tbody>
   </table>
+  <div class="home">
+    <button><a href="index.html">Home</a></button>
+  </div>
 
 
 
@@ -44,10 +48,49 @@
           <td>${user.area}</td>
           <td>${user.state}</td>
           <td>${user.city}</td>
-          <td>${user.pincode}</td>`;
+          <td>${user.pincode}</td>
+          <td><button class="primary" onclick="deleteRow(${index})">Delete</button></td>
+          <td><button  class="secondary" onclick="editRow(${index})">Edit</button></td>`;
           tbody.appendChild(row);
         });
 
+      }
+      function deleteRow(index){
+        if(confirm("Are you sure you want to delete this record?")) {
+          users.splice(index,1)
+          localStorage.setItem("users",JSON.stringify(users))
+          renderTable()
+        }
+      }
+      function editRow(index){
+        const user= users[index]
+        const updatedName = prompt("Edit Name:",user.name);
+        const updatedEmail = prompt("Edite Email:",user.email);
+        const updatedPhone = prompt("Edit Phone:",user.phone);
+        const updatedArea = prompt("Edit Area:",user.area);
+        const updatedState = prompt("Edit State:",user.state);
+        const updatedCity = prompt("Edit City:",user.city);
+        const updatedPincode = prompt("Edit Pincode:",user.pincode);
+
+        if(
+          updatedName&&updatedEmail&&
+          updatedPhone&&updatedArea&&
+          updatedState&&updatedCity&&
+          updatedPincode
+        ){
+          users[index]={
+            name:updatedName,
+            email:updatedEmail,
+            phone:updatedPhone,
+            area:updatedArea,
+            state:updatedState,
+            city:updatedCity,
+            pincode:updatedPincode
+
+          };
+          localStorage.setItem("users",JSON.stringify(users));
+          renderTable();
+        }
       }
       renderTable();
 

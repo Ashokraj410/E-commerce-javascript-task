@@ -92,3 +92,16 @@ form header{
 form{
     justify-items: center;
 }
+#submit{
+    width: 100px;
+    height: 30px;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.para button:hover{
+    background-color:goldenrod;
+    color: #fff;
+}

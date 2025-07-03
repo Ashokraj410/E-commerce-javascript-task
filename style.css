@@ -7,7 +7,7 @@ body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    background-color: #f0f2f5;
+    background-color: #ddd;
 }
 html{
     overflow-x: hidden;
@@ -20,7 +20,7 @@ main{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color:#A2AADB;
+    background-color: #9590C5;
 }
 .logo,.gotocart{
     margin-left: 40px;
@@ -78,8 +78,8 @@ input::-webkit-outer-spin-button{
     flex-wrap: wrap;
     width: 100vw;
     justify-content: space-between;
-    background-color: #A2AADB;
     height: 200px;
+    background-color: #9590C5;
 
 }
 .buttons-group{
@@ -139,7 +139,6 @@ input::-webkit-outer-spin-button{
 .product-list{
     display: flex;
     flex-direction: column;
-    background-color: #f0f2f5;
     row-gap: 20px;
 
 }
@@ -212,14 +211,15 @@ input::-webkit-outer-spin-button{
     flex-direction: row;
 }
 .buy .primary{
-    background-color:#00FA9A;
+    background-color:#3FD241;
     font-size: 15px;
     width: 80px;
-    border: 1px solid green;
+    border: 1px solid #3FD241;
     color:#fff;
     border-radius: 4px;
     height: 30px;
     cursor: pointer;
+    font-weight: 600;
 }
 .buy a{
     text-decoration: none;
@@ -230,7 +230,7 @@ input::-webkit-outer-spin-button{
     font-size: 15px;
     margin-left: 9px;
     width: 80px;
-    border: 1px solid black;
+    border: 1px solid #E6E6FA;
     color: black;
     height: 30px;
     border-radius: 4px;
